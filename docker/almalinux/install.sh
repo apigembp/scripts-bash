@@ -11,6 +11,8 @@ GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
+set -euo pipefail
+
 # Vérification que le script est lancé en root
 if [[ $EUID -ne 0 ]]; then
    echo -e "${RED}Ce script doit être lancé en tant que root.${NC}"
